@@ -4,7 +4,7 @@ A multi-page Streamlit app designed to help beginners learn trading in a safe, r
 
 ### 🎯 Project Purpose
 
-The Interactive Trading Simulator is built to help beginners learn stock trading safely using historical data. It provides practice trading, portfolio tracking, and educational resources—all in a risk-free environment.
+The Interactive Trading Simulator is built to help beginners learn stock trading safely using historical data. It provides practice trading, portfolio tracking, and educational resources — all in a risk-free environment.
 
 ### 🔎 Quick Start
 
