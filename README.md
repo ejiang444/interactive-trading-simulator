@@ -134,7 +134,7 @@ A detailed project report for the Interactive Trading Simulator is included as `
     - Demonstrates how the project fulfills proposed rubric criteria, ensuring all requirements are met
 
 ### 📎 Acknowledgement
-- Special thanks to Dr. Ingrid Eva Maria Hybinette for providing the data, and to CSCI 4170/6170 Introduction to Computational Investing for the course guidance and inspiration.
+- Special thanks to Dr. Ingrid Eva Maria Hybinette for providing the data, and to CSCI 4170 Introduction to Computational Investing for the course guidance and inspiration.
 
 ### 👥 Contributor(s)
 Emily Jiang
