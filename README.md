@@ -87,6 +87,7 @@ project/
 ├── beginners_guide.py           # Beginner’s Guide page
 ├── trading_simulator.py         # Trading Simulator page
 ├── support_center.py            # Support Center page
+├── report.pdf                   # Detailed project report
 ├── requirement.txt              # Dependencies
 ├── README.md                    # This README
 └── data/                        # Default stock CSV files
@@ -96,15 +97,15 @@ project/
 ```
 
 ### 📊 Data Requirements
-- Default stock datasets are stored in the data folder.
-- Users can upload their own CSV stock data.
+Dates are automatically parsed and sorted by the application.
+- Default stock datasets are stored in the data folder
+- Users can upload their own CSV stock data
 - CSV files should include at minimum: 
     - Date
     - Open
     - High
     - Low
     - Close
-- Dates are automatically parsed and sorted by the app.
 
 ### ⬇️ Dependencies
 Install all required packages:
@@ -116,7 +117,23 @@ pip install -r requirements.txt
 - Python 3.10+ recommended
 - Compatible with Windows, macOS, and Linux
 
-### 📎Acknowledgement
+### 📄 Project Report
+A detailed project report for the Interactive Trading Simulator is included as `report.pdf`. The report (~1,200 words) provides an in-depth overview of the project and includes the following sections:
+
+- Project Description and Methodology:
+    - Explains the purpose of the simulator, its target audience, and the design approach used
+- Steps Taken and Challenges Encountered:
+    - Details the development process, tools and libraries used, and any obstacles faced along the way
+- Results and Analysis:
+    - Highlights the outcomes of the project, including simulator functionality, user experience, and educational value
+- Effort Justification:
+    - Explains how the project meets a 1.5× effort level per contributor, including:
+        - What makes this project more substantial than a typical assignment
+        - New skills or techniques learned during development
+- Rubric Checklist:
+    - Demonstrates how the project fulfills proposed rubric criteria, ensuring all requirements are met
+
+### 📎 Acknowledgement
 - Special thanks to Dr. Ingrid Eva Maria Hybinette for providing the data, and to CSCI 4170/6170 Introduction to Computational Investing for the course guidance and inspiration.
 
 ### 👥 Contributor(s)
