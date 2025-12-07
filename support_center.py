@@ -3,7 +3,7 @@ import smtplib
 from email.mime.text import MIMEText
 
 # SEND EMAIL FUNCTION
-def send_email(user_name, user_email, message_text):
+def send_email(user_name, user_email, subject, message_text):
     """Send the support message to the configured email account."""
     gmail_user = st.secrets["email"]["address"]
     gmail_pass = st.secrets["email"]["password"]
@@ -12,9 +12,10 @@ def send_email(user_name, user_email, message_text):
         f"New Support Request Received!\n\n"
         f"From: {user_name}\n"
         f"Email: {user_email}\n\n"
+        f"Subject: {subject}\n\n"
         f"Message:\n{message_text}"
     )
-    msg["Subject"] = "Interactive Trading Simulator"
+    msg["Subject"] = f"Interactive Trading Simulator Support Request: {subject}"
     msg["From"] = gmail_user
     msg["To"] = gmail_user
 
@@ -83,8 +84,7 @@ def run():
             else:
                 with st.spinner("Sending your message..."):
                     success = send_email(user_name, user_email, subject, user_message)
-                if success:
-                    st.success("Your message has been sent successfully! Check your email for a response.")
-                    st.experimental_rerun()
-                else:
-                    st.error("There was an error sending your message. Please try again later.")
+                    if success:
+                        st.success("Your message has been sent successfully! We'll get back to you as soon as possible.")
+                    else:
+                        st.error("There was an error sending your message. Please try again later.")
