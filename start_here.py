@@ -24,10 +24,10 @@ def run():
     
     **Trading Simulator**
     > Practice buying and selling using real historical data.
-    > Track your portfolio, P&L, performance metrics, and trade history.
+    > Track your portfolio, profit/loss, performance metrics, and trade history.
     
     **Support Center**
-    > Get answers and help whenever you need it.
+    > Get help, report issues, and provide feedback.
     """)
 
     st.markdown("----")
