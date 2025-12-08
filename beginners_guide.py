@@ -27,34 +27,6 @@ def run():
             """)
         st.text("Example: If Apple stock rises from $150 to $160, and you own 100 shares, you gain $1,000.")
 
-    
-    with st.expander("Candlestick Charts"):
-        st.markdown("""
-        Candlestick charts show price movements over time. Each candle represents trading activity during a specific period.
-        """)
-        with st.expander("How to Read Candles"):
-            st.markdown("""
-            - Green/White Candle: 
-                - Price went UP (close > open)
-            - Red/Black Candle: 
-                - Price went DOWN (close < open)
-            - Body: 
-                - Range between open and close prices
-            - Wicks: 
-                - Highest and lowest prices reached
-            """)
-        with st.expander("What to Look For"):
-            st.markdown("""
-            - Trends: 
-                - Series of higher highs means uptrend, series of lower lows means downtrend
-            - Support: 
-                - Price level where stock tends to stop falling
-            - Resistance: 
-                - Price level where stock tends to stop rising
-            - Volume: 
-                - More trading activity means more reliable movements
-            """)
-
     with st.expander("Order Types"):
         st.markdown("""
         Market Order:
