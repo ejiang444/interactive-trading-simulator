@@ -28,7 +28,7 @@ def execute_buy(shares, current_price):
         "commission": 1,
         "total": total_cost
     })
-    st.success(f"Bought {shares} shares at ${execution_price:.2f} (market: ${current_price:.2f})")
+    st.success(f"Bought {shares} shares at \${execution_price:.2f} (market: \${current_price:.2f})")
 
 def execute_sell(shares, current_price):
     slippage = 0.001
@@ -47,7 +47,7 @@ def execute_sell(shares, current_price):
         "commission": 1,
         "total": total_revenue
     })
-    st.success(f"Sold {shares} shares at ${execution_price:.2f} (market: ${current_price:.2f})")
+    st.success(f"Sold {shares} shares at \${execution_price:.2f} (market: \${current_price:.2f})")
 
 def plot_price_chart(data, trades):
     fig = go.Figure()
@@ -283,14 +283,12 @@ def run():
         if st.button("🟢 BUY", use_container_width=True):
             if order_type == "Market" or (limit_price and current_price <= limit_price):
                 execute_buy(shares, current_price)
-                st.rerun()
             else:
                 st.error(f"Price ${current_price:.2f} above limit ${limit_price:.2f}")
     with col2:
         if st.button("🔴 SELL", use_container_width=True):
             if order_type == "Market" or (limit_price and current_price >= limit_price):
                 execute_sell(shares, current_price)
-                st.rerun()
             else:
                 st.error(f"Price ${current_price:.2f} below limit ${limit_price:.2f}")
     
