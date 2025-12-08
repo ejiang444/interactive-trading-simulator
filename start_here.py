@@ -2,7 +2,7 @@ import streamlit as st
 
 def run():
 
-# START HERE
+    # START HERE
     st.title("👋 Start Here")
     st.markdown(""" 
     Welcome! 
@@ -16,17 +16,18 @@ def run():
     ### **📍 How To Navigate**
     Located in the sidebar, you’ll find several key pages to explore:
     
+    **Start Here**
+    > This introduction and guide to get you started.
+
     **Beginner’s Guide**
     > Learn trading basics, simple strategies, and key concepts.
     
     **Trading Simulator**
     > Practice buying and selling using real historical data.
-    
-    **Trading Hub**
     > Track your portfolio, P&L, performance metrics, and trade history.
     
     **Support Center**
-    > Get answers, tips, and help whenever you need it.
+    > Get answers and help whenever you need it.
     """)
 
     st.markdown("----")
