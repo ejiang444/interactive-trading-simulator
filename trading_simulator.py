@@ -12,7 +12,9 @@ def get_portfolio_value(cash, position, current_price):
     return cash + position * current_price
 
 def execute_buy(shares, current_price):
-    total_cost = shares * current_price + 1 
+    slippage = 0.001
+    execution_price = current_price * (1 + slippage)
+    total_cost = shares * execution_price + 1 
     if total_cost > st.session_state.cash:
         st.error(f"❌ Not enough cash to buy {shares} shares!")
         return
@@ -22,28 +24,30 @@ def execute_buy(shares, current_price):
         "date": st.session_state.data.loc[st.session_state.current_day, "Date"],
         "action": "BUY",
         "shares": shares,
-        "price": current_price,
+        "price": execution_price,
         "commission": 1,
         "total": total_cost
     })
-    st.success(f"Bought {shares} shares at ${current_price:.2f}")
+    st.success(f"Bought {shares} shares at ${execution_price:.2f} (market: ${current_price:.2f})")
 
 def execute_sell(shares, current_price):
+    slippage = 0.001
+    execution_price = current_price * (1 - slippage)
     if shares > st.session_state.position:
         st.error(f"❌ You only have {st.session_state.position} shares!")
         return
-    total_revenue = shares * current_price - 1 
+    total_revenue = shares * execution_price - 1 
     st.session_state.cash += total_revenue
     st.session_state.position -= shares
     st.session_state.trades.append({
         "date": st.session_state.data.loc[st.session_state.current_day, "Date"],
         "action": "SELL",
         "shares": shares,
-        "price": current_price,
+        "price": execution_price,
         "commission": 1,
         "total": total_revenue
     })
-    st.success(f"Sold {shares} shares at ${current_price:.2f}")
+    st.success(f"Sold {shares} shares at ${execution_price:.2f} (market: ${current_price:.2f})")
 
 def plot_price_chart(data, trades):
     fig = go.Figure()
@@ -279,7 +283,7 @@ def run():
         if st.button("🟢 BUY", use_container_width=True):
             if order_type == "Market" or (limit_price and current_price <= limit_price):
                 execute_buy(shares, current_price)
-                st.rerun
+                st.rerun()
             else:
                 st.error(f"Price ${current_price:.2f} above limit ${limit_price:.2f}")
     with col2:
