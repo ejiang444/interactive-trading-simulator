@@ -77,7 +77,7 @@ password = "your_app_password"
 
 ### 📂 File Structure
 ```
-project/
+interactive-trading-simulator/
 │
 ├── dashboard.py                 # Main multi-page router
 ├── start_here.py                # Start Here page
