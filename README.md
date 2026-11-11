@@ -1,13 +1,10 @@
-## Interactive Trading Simulator  
-
+## Interactive Trading Simulator
 A multi-page Streamlit app designed to help beginners learn trading in a safe, risk-free environment using historical stock data. 
 
 ### 🎯 Project Purpose
-
 The Interactive Trading Simulator is built to help beginners learn stock trading safely using historical data. It provides practice trading, portfolio tracking, and educational resources — all in a risk-free environment.
 
 ### 🔎 Quick Start
-
 Follow these steps to get started:
 1. Clone the repository.
 ```
